@@ -1,5 +1,12 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
+
+char up(char x)
+{
+	x = x - 'a' + 'A';
+	return x;
+}
+
 int main() {
 	char str[30];
 	char* p;
@@ -9,7 +16,7 @@ int main() {
 	{
 		if ((*p >= 'a') && (*p <= 'z'))
 		{
-			printf("%c", *p-'a'+'A');
+			printf("%c", up(*p));
 		}
 		p = p + 1;
 	}
